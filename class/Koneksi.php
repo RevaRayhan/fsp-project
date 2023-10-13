@@ -3,11 +3,11 @@
 class Koneksi {
     protected $con;
 
-    public function construct() {
-        $this -> con = new mysqli("localhost", "root", "", "movie_fsp");
+    public function __construct() {
+        $this -> con = new mysqli("localhost", "root", "", "projectnts_fsp");
     }
 
-    public function destruct() {
+    public function __destruct() {
         $this -> con -> close();
     }
 }
